@@ -55,8 +55,8 @@ while True:
     elif action == "q":
         
         break
-    
-with open('toDo.txt','w') as file:
-            text=toDolist
+for item in toDolist:
+        with open('toDo.txt','a') as file:
+            text=item
 file.close()
     
