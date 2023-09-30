@@ -1,5 +1,4 @@
 import os
-import shutil
 
 
 if os.path.exists('toDo.txt'):
@@ -31,9 +30,11 @@ while True:
         
         last_index = len(toDolist) - 1 
         print(last_index)
-        last_index+=1
+        #last_index+=1
         item=input("what do you want to add?: ")
-        toDolist.append(item)
+        #toDolist.append(item)
+        toDolist.insert(last_index,item)
+        last_index+=1
         #with open('toDo.txt','w') as file:
         #    text=toDolist
             
@@ -57,7 +58,6 @@ while True:
     
 for item in toDolist:
         with open('toDo.txt','w') as file:
-            #text=item
             file.write("%s\n" % item)
 file.close()
     
