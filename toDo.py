@@ -53,10 +53,11 @@ while True:
         #    text=toDolist
             
     elif action == "q":
-        
         break
+    
 for item in toDolist:
-        with open('toDo.txt','a') as file:
-            text=item
+        with open('toDo.txt','w') as file:
+            #text=item
+            file.write("%s\n" % item)
 file.close()
     
