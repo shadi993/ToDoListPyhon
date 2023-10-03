@@ -12,6 +12,8 @@ else:
 toDotxt = open ('toDo.txt','r')
 data = toDotxt.read()
 toDolist = data.split("\n")
+toDotxt.close()
+toDotxt = open ('toDo.txt','w')
 
 #loop to come back to this point after modify/add/delete
 while True:
@@ -57,7 +59,8 @@ while True:
         break
     
 for item in toDolist:
-        with open('toDo.txt','w') as file:
-            file.write("%s\n" % item)
+        #with open('toDo.txt','w') as file:
+        #    file.write("%s\n" % item)
+        toDotxt.write("%s\n" % item)
 file.close()
     
