@@ -37,30 +37,24 @@ while True:
         #toDolist.append(item)
         toDolist.insert(last_index,item)
         last_index+=1
-        #with open('toDo.txt','w') as file:
-        #    text=toDolist
             
     elif action == "m":
         j =int(input("which one do you want to modify? :"))
         j-=1
         toDolist[j]=input("please type the change: ")
-        #with open('toDo.txt','w') as file:
-        #    text=toDolist
+
             
     elif action == "d":
         r =int(input("which item number you want to delete?: "))
         r-=1
         print(r)
         toDolist.pop(r)
-        #with open('toDo.txt','w') as file:
-        #    text=toDolist
+
             
     elif action == "q":
         break
     
 for item in toDolist:
-        #with open('toDo.txt','w') as file:
-        #    file.write("%s\n" % item)
         toDotxt.write("%s\n" % item)
 file.close()
     
