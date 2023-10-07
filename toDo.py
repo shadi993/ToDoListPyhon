@@ -39,10 +39,9 @@ while True:
     action = input("add a list (a). modify a list (m). delete a list (d). quit (q): ").lower()
     if action == "a":
         
-        #last_index = len(toDolist) - 1 
-        #last_index+=1
+
         item=input("what do you want to add?: ")
-        #toDolist.append(item)
+
         toDolist.insert(last_index,item)
         last_index+=1
             
