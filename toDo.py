@@ -15,6 +15,15 @@ toDolist = data.split("\n")
 toDotxt.close()
 toDotxt = open ('toDo.txt','w')
 
+#getting the last index
+last_index = len(toDolist) - 1 
+
+#fixing the extra line that appear after reopening the app
+if(toDolist[last_index]==0):
+    pass
+else:
+    toDolist.pop(last_index)
+
 #loop to come back to this point after modify/add/delete
 while True:
     print("here is your toDo list")
@@ -30,8 +39,7 @@ while True:
     action = input("add a list (a). modify a list (m). delete a list (d). quit (q): ").lower()
     if action == "a":
         
-        last_index = len(toDolist) - 1 
-        print(last_index)
+        #last_index = len(toDolist) - 1 
         #last_index+=1
         item=input("what do you want to add?: ")
         #toDolist.append(item)
@@ -56,5 +64,6 @@ while True:
     
 for item in toDolist:
         toDotxt.write("%s\n" % item)
-file.close()
+        
+toDotxt.close()
     
