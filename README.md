@@ -1,6 +1,6 @@
 # To Do List in Python
 
-my first to do list program using python (still not finished)
+my first to do list program using python
 
 problems:
 * (fixed)~~the list get duplicated or/and deleted sometimes after reopening the program~~
